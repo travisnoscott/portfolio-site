@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My test page</title>
         <link rel="stylesheet" href="../styles/main.css">
+        <script src="../styles/main.js"> </script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -74,5 +75,18 @@
                     My main passion is in medicine, so one day I hope I can develop a program or tool that will be able to assist doctors and patients around the world. 
                 </p>
             </div>
+            <body>
+            <div id="websitetest" class="center">
+                <button onclick="myFunction()">Verify the website's coding!</button>
+
+                <p id="demo"></p>
+                
+                <script>
+                function myFunction() {
+                  document.getElementById("demo").innerHTML = "This website functions as it should be!";
+                }
+                </script>
+                
+            </body>
         </body>
 </html>
