@@ -1,49 +1,48 @@
 /*header titles*/
-  h1{
-    position: relative;
-    text-align: center;
-    font-size: 35px;
-    color:#ffffff
+h1{
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  color:#ffffff
 }
 
 /*navigation buttons for pages*/
-  a:link, a:visited 
-{
-    background-color:#DAE2DF;
-    color:black;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-inline: 252px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
- }
+a:link, a:visited{
+  background-color:#DAE2DF;
+  color:black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-inline: 252px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 /*highlight color for buttons*/
-  a:hover, a:active {
-    background-color:#A2A7A5;
-  }
+a:hover, a:active{
+  background-color:#A2A7A5;
+}
 
 /*sticky element for nav bar*/
-  div.sticky {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    background-color:#550C18;
-  }
+div.sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color:#550C18;
+}
 
 /*font*/
-  body{
-    font-family: 'Montserrat', sans-serif;
+body{
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*background color*/
-  body {
-    background-color: #6D696A;
+body{
+  background-color: #6D696A;
 }
 
 /*name button*/
-.button {
+.button{
   background-color: #550C18; 
   border: none;
   color: white;
@@ -55,151 +54,149 @@
   cursor: pointer;
   border-radius: 30px; 
   display: inline-block;
-  font-family: 'Noto Sans JP', sans-serif;
-  
+  font-family: 'Noto Sans JP', sans-serif; 
 }
-.center {
+.center{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
 }
-
-figure {
+figure{
   padding: 0px;
   margin: 0px;
 }
-figcaption {
+figcaption{
   color: white;
   font-style: italic;
   margin: 0px
 }
 
 /*textbox1 on home*/
-  #textrow1{
-    font-size: 25px;
-    width: 60%;
-    height:200px;
-    padding: 10px;
-    border: black solid ;
-    background-color:#A2A7A5;
-    margin: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: block;
-    float: right;
-    margin-right: 175px;
-    font-family: 'Noto Sans JP', sans-serif;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+#textrow1{
+  font-size: 25px;
+  width: 60%;
+  height:200px;
+  padding: 10px;
+  border: black solid ;
+  background-color:#A2A7A5;
+  margin: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: block;
+  float: right;
+  margin-right: 175px;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 /*textbox2 on home*/
-  #textrow2{
-    font-size: 25px;
-    width: 60%;
-    height: 445px;
-    padding: 10px;
-    border: black solid ;
-    background-color:#A2A7A5;
-    margin: 75px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display:inline-flex;
-    float: left;
-    margin-right: 300px;
-    font-family: 'Noto Sans JP', sans-serif;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+#textrow2{
+  font-size: 25px;
+  width: 60%;
+  height: 445px;
+  padding: 10px;
+  border: black solid ;
+  background-color:#A2A7A5;
+  margin: 75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display:inline-flex;
+  float: left;
+  margin-right: 300px;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*textbox3 on home*/
-  #textrow3{
-    font-size: 25px;
-    width: 60%;
-    height: 275px;
-    padding: 10px;
-    border: black solid ;
-    background-color:#A2A7A5;
-    margin: 75px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: inline-flex;
-    float: right;
-    margin-right: 150px;
-    font-family: 'Noto Sans JP', sans-serif;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+#textrow3{
+  font-size: 25px;
+  width: 60%;
+  height: 275px;
+  padding: 10px;
+  border: black solid ;
+  background-color:#A2A7A5;
+  margin: 75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: inline-flex;
+  float: right;
+  margin-right: 150px;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*textbox4 on experiences*/
-  #textrow4{
-    font-size: 25px;
-    width: 70%;
-    height: 275px;
-    padding: 10px;
-    border: black solid ;
-    background-color:#A2A7A5;
-    margin: 50px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: inline-flex;
-    float: right;
-    margin-right: 0px;
-    font-family: 'Noto Sans JP', sans-serif;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+#textrow4{
+  font-size: 25px;
+  width: 70%;
+  height: 275px;
+  padding: 10px;
+  border: black solid ;
+  background-color:#A2A7A5;
+  margin: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: inline-flex;
+  float: right;
+  margin-right: 0px;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*textbox5 on experiences*/
-  #textrow5{
-    font-size: 25px;
-    width: 60%;
-    height:250px;
-    padding: 10px;
-    border: black solid ;
-    background-color:#A2A7A5;
-    margin: 50px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    display: inline-flex;
-    float: right;
-    margin-right: 150px;
-    font-family: 'Noto Sans JP', sans-serif;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+#textrow5{
+  font-size: 25px;
+  width: 60%;
+  height:250px;
+  padding: 10px;
+  border: black solid ;
+  background-color:#A2A7A5;
+  margin: 50px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  float: right;
+  margin-right: 150px;
+  font-family: 'Noto Sans JP', sans-serif;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*textbox6 on experiences*/
-  #textrow6{
-    font-size: 25px;
-    width: 60%;
-    height:280px;
-    padding: 10px;
-    border: black solid ;
-    background-color:#A2A7A5;
-    margin: 50px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: inline-flex;
-    float: right;
-    margin-right: 150px;
-    font-family: 'Noto Sans JP', sans-serif;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+#textrow6{
+  font-size: 25px;
+  width: 60%;
+  height:280px;
+  padding: 10px;
+  border: black solid ;
+  background-color:#A2A7A5;
+  margin: 50px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: inline-flex;
+  float: right;
+  margin-right: 150px;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*button to test website*/
 #websitetest
-.center {
-  background-color: #550C18; 
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 4px 4px;
-  cursor: pointer;
-  border-radius: 30px; 
-  display: inline-block;
-  font-family: 'Noto Sans JP', sans-serif;
-}
+  .center {
+    background-color: #550C18; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 30px; 
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 
 /*buttons for assignment*/
 .box {
@@ -210,28 +207,27 @@ figcaption {
   margin-left: 20px;
 }
 /* First two sets of images side by side on projects page*/
-  .column {
-    float: left;
-    width: 50%;
-    padding: 0px;
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
 }
 
 /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-
-  .column {
-    float: left;
-    width: 50%;
+.column {
+  float: left;
+  width: 50%;
 }
 
 /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
