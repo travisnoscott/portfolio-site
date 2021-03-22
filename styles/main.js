@@ -120,21 +120,21 @@ function centuryFromYear() {
 }
   /*Button 9, encrypt a message*/
   function encrypt() {
-    let plaintext = prompt ("Enter your plain message:"); // Prompts viewer to put in their own message
+    let plaintext = prompt ("Enter your plain message:"); // Recieves the plain message
     let ciphertext = ""; //Creates the ciphertext variable
     plaintext = plaintext.split(" "); //This splits each word in the string 
     for(let i = 0; i < plaintext.length; i = i + 1) {  //For loop to make changes to plain message
-        firstletter = ((plaintext[i][0]).replace("", "42")).toUpperCase(); //This takes the first letter of each word in the string, makes it uppercase and adds a 323 behind it
-        lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "q"); //This takes the last letter of each word in the string, makes it uppercase and adds a Q behind it.
-        ciphertext += "xz" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "ow" ; //This adds an owp2 to the front and end of each word. 
+        firstletter = ((plaintext[i][0]).replace("", "97")).toUpperCase(); //This takes the first letter of each word in the string and makes it uppercase and adds a 97 behind it
+        lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "j"); //This takes the last letter of each word in the string and makes it uppercase and adds a j behind it.
+        ciphertext += "xz" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "xz " ; //This adds an xz to the front and end of each word. This also removes the first and last letter in each word and then adds the modified first letter followed by the modified last letter.
     }
-    document.getElementById("encrypted").innerHTML = ciphertext;  
-    alert("Copy this encrypted message and paste on decrypt button! " + ciphertext); //Alert to copy the encrypted message
+    document.getElementById("encrypted").innerHTML = ciphertext;  //This displays the encrypted text on the button
+    alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) //Alert to copy the encrypted message
 }
 
 /*Button 10, decrpyt a message*/
 function decrypt() { 
-  let ciphertext = prompt ("Enter your encrypted message:"); // Prompts user to enter an encrypted message
+  let ciphertext = prompt ("Enter your encrypted message:"); //Recieves the encrypted message
   let plaintext = ""; //Creates the plain text variable
   ciphertext = ciphertext.split(" "); //This splits each word in the string 
   for(let i = 0; i < ciphertext.length; i = i + 1) { //Loop to make changes to encypted message
@@ -143,4 +143,6 @@ function decrypt() {
       plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; //This makes the plain message by adding the modified firstletter var. Then this takes the encrypted text and slices out the plain parts of the plain message. Lastly it adds the modified lastletter var to decrypt the message.
   }
   document.getElementById("decrypted").innerHTML = plaintext; // This displays the decryped message (plain message) on the button
+  
+  
 }
