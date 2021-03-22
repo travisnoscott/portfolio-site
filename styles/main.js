@@ -78,7 +78,7 @@ function thirdAngle() {
   var b = parseInt(prompt("Enter another angle of a triangle "));
   var totalSum = 0;
 
-  if ((a + b) < 180){
+  if ((a + b) < 180){ //if the angles entered are valid (do not exceed 180 degrees)
   totalSum = 180 - (a + b); 
   alert ("The angle that is missing is " + totalSum );
   }
