@@ -31,11 +31,12 @@ function signOfProduct(){
   var c = parseInt(prompt("Place a number"));
   var totalProduct = a * b * c;
   if (totalProduct < 0 ){
-    alert("The sign of the product is -")  
+      output = "The sign of the product is -";  
   }
   if (totalProduct > 0 ){
-      alert("The sign of the product is +")  
+      output = "The sign of the product is +";  
     }
+    document.getElementById("ProductSign").innerHTML = output;
 }
 
   /*Button 3, three number sort least to greatest*/
@@ -45,9 +46,12 @@ function threeNumberSort(){
   var c = parseInt(prompt("Place a number"));
   let array = [a, b, c];
   array.sort(function(a, b, c){return a - b});
-  alert ("the order from greatest to least is " + array);
-    
+    {
+      output = "the order from greatest to least is " + array;
+    }
+    document.getElementById("leastToGreatest").innerHTML = output;
 }
+
   /*Button 4, forSum of multiples of 3 under 1000*/
 function forSumThrees() {
   let sum = 0;
@@ -80,13 +84,13 @@ function thirdAngle() {
 
   if ((a + b) < 180){ //if the angles entered are valid (do not exceed 180 degrees)
   totalSum = 180 - (a + b); 
-  alert ("The angle that is missing is " + totalSum );
+  output = "The angle that is missing is " + totalSum ;
   }
 
   else if ((a + b) > 180){
-  alert ("Invalid. Enter two angles of a triangle.");    
+  output = "Invalid. Enter two angles of a triangle.";    
   }
-
+  document.getElementById("missingAngle").innerHTML = output;
 }
 /*Button 7, what century is this?*/
 function centuryFromYear() {
@@ -100,6 +104,7 @@ function centuryFromYear() {
   return alert ('The year you entered is in the century of ' + century);
   
 }
+
   /*Button 8, list multiples of ten and four from 1-100*/
   function tenFour() {
     let sum = 0;
