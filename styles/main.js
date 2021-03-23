@@ -26,10 +26,10 @@ function largernumber(){
 
  /*Button 2, Sign of product for 3 numbers button*/
 function signOfProduct(){
-  var a = parseInt(prompt("Enter the first number"));
-  var b = parseInt(prompt("Enter the second number"));
-  var c = parseInt(prompt("Place the third number"));
-  var totalProduct = a * b * c;
+  let a = parseInt(prompt("Enter the first number"));
+  let b = parseInt(prompt("Enter the second number"));
+  let c = parseInt(prompt("Place the third number"));
+  let totalProduct = a * b * c;
   if (totalProduct < 0 ){
       output = "The sign of the product of your entered numbers is, -";  
   }
@@ -41,9 +41,9 @@ function signOfProduct(){
 
   /*Button 3, three number sort least to greatest*/
 function threeNumberSort(){
-  var a = parseInt(prompt("Enter the first number"));
-  var b = parseInt(prompt("Enter the second number"));
-  var c = parseInt(prompt("Enter the third number"));
+  let a = parseInt(prompt("Enter the first number"));
+  let b = parseInt(prompt("Enter the second number"));
+  let c = parseInt(prompt("Enter the third number"));
   let array = [a, b, c];
   array.sort(function(a, b, c){return a - b});
     {
@@ -81,9 +81,9 @@ function whileSumThrees(){
  /*Button 6, find missing third angle in a triangle*/
 function thirdAngle() {
   output = "Put in the two angles of a triangle and the machine will find the missing third angle." ;
-  var a = parseInt(prompt("Enter an angle of a triangle"));
-  var b = parseInt(prompt("Enter another angle of a triangle "));
-  var totalSum = 0;
+  let a = parseInt(prompt("Enter an angle of a triangle"));
+  let b = parseInt(prompt("Enter another angle of a triangle "));
+  let totalSum = 0;
 
   if ((a + b) < 180){ //if the angles entered are valid (do not exceed 180 degrees)
   totalSum = 180 - (a + b); 
@@ -100,11 +100,10 @@ function centuryFromYear() {
   let userYear = prompt ('Enter a year to know what century it is from', '2021');
   let century = 0;
 
-  century = Math.ceil(userYear/100);
-      if (toString(century)[-1] == 1) { 
-         century = toString(century) + 'st'
+  century = Math.ceil(userYear/100); { 
+
     }
-  output = "The year you entered is in the century of " + century;
+  output = "The year you entered is in the century of " + century ;
   document.getElementById("centuryYear").innerHTML = output;  
   }
   
