@@ -13,13 +13,13 @@ function largernumber(){
   let num2 =  parseInt(prompt("Enter the second number: "));
   let output = ""
   if (num1 > num2){
-  output = num1;
+    output = num1;
   } else if (num1 == num2){
-  output = "The numbers entered are equal";
+    output = "The numbers entered are equal";
   } else if (num2 > num1){
-  output = num2;
+    output = num2;
   } else {
-  output = "Invalid Output";
+    output = "Invalid Output";
   }
   document.getElementById("largerNum").innerHTML = output;
 }
@@ -36,7 +36,7 @@ function signOfProduct(){
   if (totalProduct > 0 ){
       output = "The sign of the product is +";  
     }
-    document.getElementById("ProductSign").innerHTML = output;
+  document.getElementById("ProductSign").innerHTML = output;
 }
 
   /*Button 3, three number sort least to greatest*/
@@ -49,7 +49,7 @@ function threeNumberSort(){
     {
       output = "the order from greatest to least is " + array;
     }
-    document.getElementById("leastToGreatest").innerHTML = output;
+  document.getElementById("leastToGreatest").innerHTML = output;
 }
 
   /*Button 4, forSum of multiples of 3 under 1000*/
@@ -60,8 +60,10 @@ function forSumThrees() {
       ! (i % 3) && (sum += i)
         
   }
-  console.log(sum); /*logs result to console*/
+      output = "The forSum of multiples  of 3 under 1000 is " + sum 
+      document.getElementById("forSumOfThrees").innerHTML = output;
 }
+
 
   /*Button 5, whileSum of multiples of 3 under 1000*/
 function whileSumThrees(){
@@ -72,8 +74,9 @@ function whileSumThrees(){
       sum += i;
       i = i + 3;
 }
-     console.log(sum) /*log the result to the console*/
- }
+     output = "The whileSum of multiples  of 3 under 1000 is " + sum
+     document.getElementById("whileSumOfThrees").innerHTML = output;
+}
    
  /*Button 6, find missing third angle in a triangle*/
 function thirdAngle() {
@@ -94,17 +97,17 @@ function thirdAngle() {
 }
 /*Button 7, what century is this?*/
 function centuryFromYear() {
-  let userYear = prompt ('Want to know what century any year is in? Enter a year!', '2021');
+  let userYear = prompt ('Enter a year to know what century it is from', '2021');
   let century = 0;
 
   century = Math.floor(userYear/100+1);
-      if (toString(century)[-1] == 1) /*&& toString(century)[-1] !=11)*/{ 
+      if (toString(century)[-1] == 1) { 
          century = toString(century) + 'st'
-      }
-  return alert ('The year you entered is in the century of ' + century);
+    }
+  output = "The year you entered is in the century of " + century;
+  document.getElementById("centuryYear").innerHTML = output;  
+  }
   
-}
-
   /*Button 8, list multiples of ten and four from 1-100*/
   function tenFour() {
     let sum = 0;
@@ -126,28 +129,28 @@ function centuryFromYear() {
   /*Button 9, encrypt a message*/
   function encrypt() {
     let plaintext = prompt ("Enter your plain message:"); // Recieves the plain message
-    let ciphertext = ""; //Creates the ciphertext variable
-    plaintext = plaintext.split(" "); //This splits each word in the string 
-    for(let i = 0; i < plaintext.length; i = i + 1) {  //For loop to make changes to plain message
-        firstletter = ((plaintext[i][0]).replace("", "97")).toUpperCase(); //This takes the first letter of each word in the string and makes it uppercase and adds a 97 behind it
-        lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "j"); //This takes the last letter of each word in the string and makes it uppercase and adds a j behind it.
-        ciphertext += "xz" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "xz " ; //This adds an xz to the front and end of each word. This also removes the first and last letter in each word and then adds the modified first letter followed by the modified last letter.
+    let ciphertext = "";
+    plaintext = plaintext.split(" "); // splitting words in the string
+    for(let i = 0; i < plaintext.length; i = i + 1) {  // loop to make changes in the text
+        firstletter = ((plaintext[i][0]).replace("", "78")).toUpperCase(); // Uppercases the first letter in word and puts a 78 behind them
+        lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "q"); //Uppercases the last letter in the word and adds a q infront of it
+        ciphertext += "xz" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "tu " ; //adds a "tu" to the word while adding the modified first and last letters
     }
-    document.getElementById("encrypted").innerHTML = ciphertext;  //This displays the encrypted text on the button
-    alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) //Alert to copy the encrypted message
+    document.getElementById("encrypted").innerHTML = ciphertext;  
+    alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) 
 }
 
 /*Button 10, decrpyt a message*/
 function decrypt() { 
   let ciphertext = prompt ("Enter your encrypted message:"); //Recieves the encrypted message
-  let plaintext = ""; //Creates the plain text variable
-  ciphertext = ciphertext.split(" "); //This splits each word in the string 
-  for(let i = 0; i < ciphertext.length; i = i + 1) { //Loop to make changes to encypted message
-      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); //This takes the first letter of each plain message by extracting it with slice method and making it lowercase
-      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //This takes the last letter of each plain message by extracting it with slice method and making it lowercase
-      plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; //This makes the plain message by adding the modified firstletter var. Then this takes the encrypted text and slices out the plain parts of the plain message. Lastly it adds the modified lastletter var to decrypt the message.
+  let plaintext = ""; 
+  ciphertext = ciphertext.split(" "); // splitting words in the string  
+  for(let i = 0; i < ciphertext.length; i = i + 1) { // loop to make changes in text 
+      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); // Extracts the first letter in the plain message with slice and makes it lowercase 
+      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //  Extracts the last letter in the plain message with slice and makes it lowercase 
+      plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
   }
-  document.getElementById("decrypted").innerHTML = plaintext; // This displays the decryped message (plain message) on the button
+  document.getElementById("decrypted").innerHTML = plaintext; 
   
   
 }
