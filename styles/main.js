@@ -9,13 +9,13 @@
 
 /* Assignment button 1, find larger number button*/
 function largernumber(){
-  let num1 = parseInt(prompt("Enter the first number: "));
-  let num2 =  parseInt(prompt("Enter the second number: "));
+  let num1 = parseInt(prompt("Enter your first number: "));
+  let num2 =  parseInt(prompt("Enter your second number: "));
   let output = ""
   if (num1 > num2){
     output = num1;
   } else if (num1 == num2){
-    output = "The numbers entered are equal";
+    output = "The numbers you entered are equal!";
   } else if (num2 > num1){
     output = num2;
   } else {
@@ -26,28 +26,28 @@ function largernumber(){
 
  /*Button 2, Sign of product for 3 numbers button*/
 function signOfProduct(){
-  var a = parseInt(prompt("Place a number"));
-  var b = parseInt(prompt("Place a number"));
-  var c = parseInt(prompt("Place a number"));
+  var a = parseInt(prompt("Enter the first number"));
+  var b = parseInt(prompt("Enter the second number"));
+  var c = parseInt(prompt("Place the third number"));
   var totalProduct = a * b * c;
   if (totalProduct < 0 ){
-      output = "The sign of the product is -";  
+      output = "The sign of the product of your entered numbers is, -";  
   }
   if (totalProduct > 0 ){
-      output = "The sign of the product is +";  
+      output = "The sign of the product of your entered numbers is, +";  
     }
   document.getElementById("ProductSign").innerHTML = output;
 }
 
   /*Button 3, three number sort least to greatest*/
 function threeNumberSort(){
-  var a = parseInt(prompt("Place a number"));
-  var b = parseInt(prompt("Place a number"));
-  var c = parseInt(prompt("Place a number"));
+  var a = parseInt(prompt("Enter the first number"));
+  var b = parseInt(prompt("Enter the second number"));
+  var c = parseInt(prompt("Enter the third number"));
   let array = [a, b, c];
   array.sort(function(a, b, c){return a - b});
     {
-      output = "the order from greatest to least is " + array;
+      output = "These numbers ordered from least to greatest is, " + array;
     }
   document.getElementById("leastToGreatest").innerHTML = output;
 }
@@ -134,7 +134,7 @@ function centuryFromYear() {
     for(let i = 0; i < plaintext.length; i = i + 1) {  // loop to make changes in the text
         firstletter = ((plaintext[i][0]).replace("", "78")).toUpperCase(); // Uppercases the first letter in word and puts a 78 behind them
         lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "q"); //Uppercases the last letter in the word and adds a q infront of it
-        ciphertext += "xz" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "tu " ; //adds a "tu" to the word while adding the modified first and last letters
+        ciphertext += "tu" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "tu " ; //adds a "tu" to the word while adding the modified first and last letters
     }
     document.getElementById("encrypted").innerHTML = ciphertext;  
     alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) 
