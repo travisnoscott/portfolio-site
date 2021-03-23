@@ -80,7 +80,7 @@ function whileSumThrees(){
    
  /*Button 6, find missing third angle in a triangle*/
 function thirdAngle() {
-  alert ("Put in the two angles of a triangle and the machine will find the missing third angle." );
+  output = "Put in the two angles of a triangle and the machine will find the missing third angle." ;
   var a = parseInt(prompt("Enter an angle of a triangle"));
   var b = parseInt(prompt("Enter another angle of a triangle "));
   var totalSum = 0;
@@ -100,7 +100,7 @@ function centuryFromYear() {
   let userYear = prompt ('Enter a year to know what century it is from', '2021');
   let century = 0;
 
-  century = Math.floor(userYear/100+1);
+  century = Math.ceil(userYear/100);
       if (toString(century)[-1] == 1) { 
          century = toString(century) + 'st'
     }
