@@ -12,13 +12,13 @@ function largernumber(){
   let num1 = parseInt(prompt("Enter your first number: "));
   let num2 =  parseInt(prompt("Enter your second number: "));
   let output = ""
-  if (num1 > num2){
+  if (num1 > num2){ //if first number is larger than second, output first
     output = num1;
-  } else if (num1 == num2){
+  } else if (num1 == num2){ // otherwise, if they are equal, output this
     output = "The numbers you entered are equal!";
-  } else if (num2 > num1){
+  } else if (num2 > num1){ // if num 2 is larger, output this
     output = num2;
-  } else {
+  } else { // if there arent sufficient numbers for the function to work
     output = "Invalid Output";
   }
   document.getElementById("largerNum").innerHTML = output;
@@ -29,11 +29,11 @@ function signOfProduct(){
   let a = parseInt(prompt("Enter the first number"));
   let b = parseInt(prompt("Enter the second number"));
   let c = parseInt(prompt("Place the third number"));
-  let totalProduct = a * b * c;
-  if (totalProduct < 0 ){
+  let totalProduct = a * b * c; //defines total product as the variables multiplied by eachother
+  if (totalProduct < 0 ){ //if the product is less than 0 (negative) 
       output = "The sign of the product of your entered numbers is, -";  
   }
-  if (totalProduct > 0 ){
+  if (totalProduct > 0 ){ //if the product is more than 0 (positive)
       output = "The sign of the product of your entered numbers is, +";  
     }
   document.getElementById("ProductSign").innerHTML = output;
@@ -44,8 +44,8 @@ function threeNumberSort(){
   let a = parseInt(prompt("Enter the first number"));
   let b = parseInt(prompt("Enter the second number"));
   let c = parseInt(prompt("Enter the third number"));
-  let array = [a, b, c];
-  array.sort(function(a, b, c){return a - b});
+  let array = [a, b, c]; // creates a "list" containing all variables that were inputted
+  array.sort(function(a, b, c){return a - b}); //sort function for array which shows least to greatest
     {
       output = "These numbers ordered from least to greatest is, " + array;
     }
@@ -55,8 +55,7 @@ function threeNumberSort(){
   /*Button 4, forSum of multiples of 3 under 1000*/
 function forSumThrees() {
   let sum = 0;
-  for (let i = 0; i < 1000; i++) {
-    
+  for (let i = 0; i < 1000; i++) { //sums multiples of 3 under 1000 using a forloop 
       ! (i % 3) && (sum += i)
         
   }
@@ -70,7 +69,7 @@ function whileSumThrees(){
   let sum = 0;
   let i = 0;
     while (i < 1000) {
-                               /*sums the multiples of 3 under 1000*/
+                               //sums the multiples of 3 under 1000 using a whileloop
       sum += i;
       i = i + 3;
 }
@@ -86,7 +85,7 @@ function thirdAngle() {
   let totalSum = 0;
 
   if ((a + b) < 180){ //if the angles entered are valid (do not exceed 180 degrees)
-  totalSum = 180 - (a + b); 
+  totalSum = 180 - (a + b); //the angle is (total angle of a triangle), subtract the sum of the angles inputted
   output = "The angle that is missing is " + totalSum ;
   }
 
@@ -96,11 +95,11 @@ function thirdAngle() {
   document.getElementById("missingAngle").innerHTML = output;
 }
 /*Button 7, what century is this?*/
-function centuryFromYear() {
+function centuryFromYear() { //finds century from year input using ceil function
   let userYear = prompt ('Enter a year to know what century it is from', '2021');
   let century = 0;
 
-  century = Math.ceil(userYear/100); { 
+  century = Math.ceil(userYear/100); { //ceil finds smallest integer greater than given value. this works since centuries are in 100 year ranges
 
     }
   output = "The year you entered is in the century of " + century ;
