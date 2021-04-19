@@ -1,7 +1,7 @@
  /* Whats your name button */
   function getName(){
-    let name = prompt("What's your name?");
-    alert("Nice to meet you, " + name);
+    let name = prompt("What's your name?"); //simple greeting, retrieves name
+    alert("Nice to meet you, " + name); // returns name
   }
 
   let firstname = "Travis";
@@ -41,11 +41,11 @@ function signOfProduct(){
 
   /*Button 3, three number sort least to greatest*/
 function threeNumberSort(){
-  let a = parseInt(prompt("Enter the first number"));
-  let b = parseInt(prompt("Enter the second number"));
-  let c = parseInt(prompt("Enter the third number"));
-  let array = [a, b, c]; // creates a "list" containing all variables that were inputted
-  array.sort(function(a, b, c){return a - b}); //sort function for array which shows least to greatest
+  let num1 = parseInt(prompt("Enter the first number"));
+  let num2 = parseInt(prompt("Enter the second number"));
+  let num3 = parseInt(prompt("Enter the third number"));
+  let array = [num1, num2, num3]; // creates a "list" containing all variables that were inputted
+  array.sort(function(a, b){return a - b}); //sort function for array which shows least to greatest
     {
       output = "These numbers ordered from least to greatest is, " + array;
     }
@@ -57,12 +57,10 @@ function forSumThrees() {
   let sum = 0;
   for (let i = 0; i < 1000; i++) { //sums multiples of 3 under 1000 using a forloop 
       ! (i % 3) && (sum += i)
-        
   }
       output = "The forSum of multiples  of 3 under 1000 is " + sum 
       document.getElementById("forSumOfThrees").innerHTML = output;
 }
-
 
   /*Button 5, whileSum of multiples of 3 under 1000*/
 function whileSumThrees(){
@@ -85,12 +83,12 @@ function thirdAngle() {
   let totalSum = 0;
 
   if ((a + b) < 180){ //if the angles entered are valid (do not exceed 180 degrees)
-  totalSum = 180 - (a + b); //the angle is (total angle of a triangle), subtract the sum of the angles inputted
-  output = "The angle that is missing is " + totalSum ;
+    totalSum = 180 - (a + b); //the angle is (total angle of a triangle), subtract the sum of the angles inputted
+    output = "The angle that is missing is " + totalSum ;
   }
 
   else if ((a + b) > 180){
-  output = "Invalid. Enter two angles of a triangle.";    
+    output = "Invalid. Enter two angles of a triangle.";    
   }
   document.getElementById("missingAngle").innerHTML = output;
 }
@@ -115,10 +113,10 @@ function centuryFromYear() { //finds century from year input using ceil function
             multipleOf4or10 += (' TenFour! ');
          }
          else if(i % 4 === 0){
-             multipleOf4or10 += (' Four! ');
+            multipleOf4or10 += (' Four! ');
          }
          else if(i % 10 === 0){
-             multipleOf4or10 += ('Ten!');
+            multipleOf4or10 += ('Ten!');
          }
          else(multipleOf4or10 += ' ' + i + ' ');
      }
@@ -131,8 +129,8 @@ function centuryFromYear() { //finds century from year input using ceil function
     plaintext = plaintext.split(" "); // splitting words in the string
     for(let i = 0; i < plaintext.length; i = i + 1) {  // loop to make changes in the text
         firstletter = ((plaintext[i][0]).replace("", "78")).toUpperCase(); // Uppercases the first letter in word and puts a 78 behind them
-        lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "q"); //Uppercases the last letter in the word and adds a q infront of it
-        ciphertext += "tu" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "tu " ; //adds a "tu" to the word while adding the modified first and last letters
+        lastletter = (((plaintext[i]).slice(-1)).replace("", "q")); //Adds a "q" infront of  last letter of word it
+        ciphertext += "hi" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "ya " ; //adds a "tu" to the word while adding the modified first and last letters
     }
     document.getElementById("encrypted").innerHTML = ciphertext;  
     alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) 
@@ -145,7 +143,7 @@ function decrypt() {
   ciphertext = ciphertext.split(" "); // splitting words in the string  
   for(let i = 0; i < ciphertext.length; i = i + 1) { // loop to make changes in text 
       firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); // Extracts the first letter in the plain message with slice and makes it lowercase 
-      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //  Extracts the last letter in the plain message with slice and makes it lowercase 
+      lastletter = ((ciphertext[i]).slice(-3, -2)); //  Extracts the last letter in the plain message with slice
       plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
   }
   document.getElementById("decrypted").innerHTML = plaintext; 
