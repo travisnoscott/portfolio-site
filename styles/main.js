@@ -128,8 +128,8 @@ function centuryFromYear() { //finds century from year input using ceil function
     let ciphertext = "";
     plaintext = plaintext.split(" "); // splitting words in the string
     for(let i = 0; i < plaintext.length; i = i + 1) {  // loop to make changes in the text
-        firstletter = ((plaintext[i][0]).replace("", "78")).toUpperCase(); // Uppercases the first letter in word and puts a 78 behind them
-        lastletter = (((plaintext[i]).slice(-1)).replace("", "q")); //Adds a "q" infront of  last letter of word it
+        firstletter = ((plaintext[i][0]).replace("", "78")).toUpperCase(); // (FIRST LETTER MODIFICATIONS) Uppercases the first letter in word and puts a 78 behind them
+        lastletter = (((plaintext[i]).slice(-1)).replace("", "q")); // (LAST LETTER MODIFICATIONS) Adds a "q" infront of  last letter of word it
         ciphertext += "hi" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "ya " ; //adds a "tu" to the word while adding the modified first and last letters
     }
     document.getElementById("encrypted").innerHTML = ciphertext;  
@@ -142,8 +142,8 @@ function decrypt() {
   let plaintext = ""; 
   ciphertext = ciphertext.split(" "); // splitting words in the string  
   for(let i = 0; i < ciphertext.length; i = i + 1) { // loop to make changes in text 
-      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); // Extracts the first letter in the plain message with slice and makes it lowercase 
-      lastletter = ((ciphertext[i]).slice(-3, -2)); //  Extracts the last letter in the plain message with slice
+      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); // (FIRST LETTER DEMODIFICATION) Extracts the first letter in the plain message with slice and makes it lowercase 
+      lastletter = ((ciphertext[i]).slice(-3, -2)); //  (LAST LETTER DEMODIFICATION) Extracts the last letter in the plain message with slice
       plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
   }
   document.getElementById("decrypted").innerHTML = plaintext; 
